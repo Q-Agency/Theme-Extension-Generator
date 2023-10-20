@@ -1,8 +1,7 @@
 import 'package:analyzer/dart/element/element.dart';
 import 'package:build/build.dart';
 import 'package:source_gen/source_gen.dart';
-
-import '../annotations.dart';
+import 'package:theme_extension_generator/annotations.dart';
 
 class ThemeExtensionGenerator
     extends GeneratorForAnnotation<ThemeExtensionGen> {
@@ -14,9 +13,9 @@ class ThemeExtensionGenerator
     ConstantReader annotation,
     BuildStep buildStep,
   ) {
-    type = element.genericType;
-
+    type = annotation.read('forType').literalValue as String;
     final className = annotation.read('className').literalValue as String;
+
     final constructor = element.children
         .firstWhere((child) => child.kind == ElementKind.CONSTRUCTOR);
     final fields = constructor.children.map((field) => field.name);
