@@ -1,0 +1,9 @@
+# Read about `build.yaml` at https://pub.dev/packages/build_config
+builders:
+  property_multiply:
+    import: "package:source_gen_example/builder.dart"
+    builder_factories: ["themeExtensionBuilder"]
+    build_extensions: { ".dart": ["themeExtension.g.part"] }
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
