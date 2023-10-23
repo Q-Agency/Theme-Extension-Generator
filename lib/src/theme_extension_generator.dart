@@ -14,7 +14,8 @@ class ThemeExtensionGenerator
     BuildStep buildStep,
   ) {
     type = annotation.read('forType').literalValue as String;
-    final className = annotation.read('className').literalValue as String;
+    final className =
+        (annotation.read('className').literalValue as String?) ?? element.name;
 
     final constructor = element.children
         .firstWhere((child) => child.kind == ElementKind.CONSTRUCTOR);
@@ -29,9 +30,7 @@ class ThemeExtensionGenerator
     final lerpRows = fields.map(_generateLerpRow).join(',\n');
 
     return '''
-    //${element.getExtendedDisplayName(null)}
-    //${element.getDisplayString(withNullability: false)}}
-    class _\$$className extends ThemeExtension<_\$$className> {
+    class _\$$className<T> extends ThemeExtension<_\$$className> {
       $instanceVariables;
 
       const _\$$className({

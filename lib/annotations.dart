@@ -1,9 +1,9 @@
 class ThemeExtensionGen {
+  final String? className;
   final String forType;
-  final String className;
 
   const ThemeExtensionGen({
     required this.forType,
-    this.className = 'AppThemeExtension',
+    this.className,
   });
 }
