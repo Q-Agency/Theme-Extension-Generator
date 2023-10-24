@@ -1,6 +1,6 @@
 import 'package:example_usage/app_colors.dart';
 import 'package:example_usage/app_text_styles.dart';
-import 'package:example_usage/build_context_extensions.dart';
+import 'package:example_usage/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,23 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.cyan,
-        colorScheme: ThemeData().colorScheme.copyWith(
-              primary: context.appColors.defaultColor,
-              secondary: context.appColors.secondary,
-            ),
-        scaffoldBackgroundColor: context.appColors.background,
-        textSelectionTheme: TextSelectionThemeData(
-          cursorColor: context.appColors.defaultColor,
-          selectionColor: context.appColors.defaultColor?.withOpacity(0.2),
-          selectionHandleColor: context.appColors.defaultColor,
-        ),
-        extensions: [
-          AppColors.primary(),
-          AppTextStyles.primary(defaultColor: AppColors.primary().defaultColor!)
-        ],
-      ),
+      theme: primaryTheme,
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -58,19 +42,20 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: context.appColors.globalGray,
         title: Text(widget.title),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
+            Text(
               'You have pushed the button this many times:',
+              style: context.appTextStyles.headline4,
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+              style: context.appTextStyles.boldLarge,
             ),
           ],
         ),

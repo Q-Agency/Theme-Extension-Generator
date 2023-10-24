@@ -6,7 +6,7 @@ part of 'app_colors.dart';
 // ThemeExtensionGenerator
 // **************************************************************************
 
-class _$AppColors<T> extends ThemeExtension<_$AppColors> {
+class _$AppColors extends ThemeExtension<_$AppColors> {
   final Color? defaultColor;
   final Color? secondary;
   final Color? background;
@@ -55,4 +55,9 @@ class _$AppColors<T> extends ThemeExtension<_$AppColors> {
       globalPrimary: Color.lerp(globalPrimary, other.globalPrimary, t),
     );
   }
+}
+
+extension BuildContextExtensions on BuildContext {
+  // ignore: library_private_types_in_public_api
+  _$AppColors get appColors => Theme.of(this).extension<_$AppColors>()!;
 }

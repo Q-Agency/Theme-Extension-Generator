@@ -6,7 +6,7 @@ part of 'app_text_styles.dart';
 // ThemeExtensionGenerator
 // **************************************************************************
 
-class _$AppTextStyles<T> extends ThemeExtension<_$AppTextStyles> {
+class _$AppTextStyles extends ThemeExtension<_$AppTextStyles> {
   final TextStyle? paragraph;
   final TextStyle? headline4;
   final TextStyle? boldLarge;
@@ -55,4 +55,10 @@ class _$AppTextStyles<T> extends ThemeExtension<_$AppTextStyles> {
       smallParagraph: TextStyle.lerp(smallParagraph, other.smallParagraph, t),
     );
   }
+}
+
+extension BuildContextExtensions on BuildContext {
+  // ignore: library_private_types_in_public_api
+  _$AppTextStyles get appTextStyles =>
+      Theme.of(this).extension<_$AppTextStyles>()!;
 }

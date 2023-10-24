@@ -30,7 +30,7 @@ class ThemeExtensionGenerator
     final lerpRows = fields.map(_generateLerpRow).join(',\n');
 
     return '''
-    class _\$$className<T> extends ThemeExtension<_\$$className> {
+    class _\$$className extends ThemeExtension<_\$$className> {
       $instanceVariables;
 
       const _\$$className({
@@ -54,6 +54,11 @@ class ThemeExtensionGenerator
         );
       }
     }
+
+    extension BuildContextExtensions on BuildContext {
+      // ignore: library_private_types_in_public_api
+      _\$$className get ${className.camelCase} => Theme.of(this).extension<_\$$className>()!;
+    }
     ''';
   }
 
@@ -64,4 +69,9 @@ class ThemeExtensionGenerator
   String _generateCopyWithProperty(String? field) => '$type? $field';
   String _generateRequiredConstructorProperty(String? field) =>
       'required this.$field';
+}
+
+extension _ToCamelCase on String? {
+  String? get camelCase =>
+      this == null ? null : '${this![0].toLowerCase()}${this!.substring(1)}';
 }
