@@ -13,8 +13,8 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^6.1.0
-  theme_extension_generator:
-    path: ../theme_extension_generator
+  theme_extender:
+    path: ../.
 
 dev_dependencies:
   build_runner: ^2.4.6

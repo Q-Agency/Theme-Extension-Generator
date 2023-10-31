@@ -10,7 +10,7 @@ library source_gen_example.builder;
 
 import 'package:build/build.dart';
 import 'package:source_gen/source_gen.dart';
-import 'package:theme_extension_generator/src/theme_extension_generator.dart';
+import 'package:theme_extender/src/theme_extension_generator.dart';
 
 Builder themeExtensionBuilder(BuilderOptions options) =>
     SharedPartBuilder([ThemeExtensionGenerator()], 'themeExtension');
