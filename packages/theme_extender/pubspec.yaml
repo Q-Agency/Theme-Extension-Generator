@@ -8,6 +8,11 @@ dependencies:
   analyzer: ">=5.2.0 <7.0.0"
   build: ^2.0.0
   source_gen: ^1.4.0
+  theme_extender_annotation: 
+    git:
+      url: https://github.com/Q-Agency/Theme-Extension-Generator.git
+      path: packages/theme_extender_annotation
+
 
 dev_dependencies:
   dart_flutter_team_lints: ^2.0.0

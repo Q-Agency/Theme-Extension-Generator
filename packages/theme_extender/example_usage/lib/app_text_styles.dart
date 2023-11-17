@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:theme_extender/annotations.dart';
+import 'package:theme_extender_annotation/theme_extender_annotation.dart';
 
 part 'app_text_styles.g.dart';
 

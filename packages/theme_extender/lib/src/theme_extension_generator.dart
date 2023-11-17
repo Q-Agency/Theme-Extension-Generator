@@ -1,7 +1,7 @@
 import 'package:analyzer/dart/element/element.dart';
 import 'package:build/build.dart';
 import 'package:source_gen/source_gen.dart';
-import 'package:theme_extender/annotations.dart';
+import 'package:theme_extender_annotation/theme_extender_annotation.dart';
 
 class ThemeExtensionGenerator
     extends GeneratorForAnnotation<ThemeExtensionGen> {

@@ -551,6 +551,13 @@ packages:
       relative: true
     source: path
     version: "0.0.0"
+  theme_extender_annotation:
+    dependency: "direct main"
+    description:
+      path: "../../theme_extender_annotation"
+      relative: true
+    source: path
+    version: "1.0.0"
   timing:
     dependency: transitive
     description:

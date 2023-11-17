@@ -15,6 +15,9 @@ dependencies:
   google_fonts: ^6.1.0
   theme_extender:
     path: ../.
+  theme_extender_annotation: 
+    path: ../../theme_extender_annotation
+
 
 dev_dependencies:
   build_runner: ^2.4.6
