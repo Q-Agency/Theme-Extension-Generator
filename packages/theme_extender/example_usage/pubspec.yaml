@@ -15,12 +15,10 @@ dependencies:
   google_fonts: ^6.1.0
   theme_extender:
     path: ../.
-  # theme_extender_annotation: 
-  #   git:
-  #     url: https://github.com/Q-Agency/Theme-Extension-Generator.git
-  #     path: packages/theme_extender_annotation
   theme_extender_annotation: 
-    path: ../../theme_extender_annotation
+    git:
+      url: https://github.com/Q-Agency/Theme-Extension-Generator.git
+      path: packages/theme_extender_annotation
 
 
 dev_dependencies:

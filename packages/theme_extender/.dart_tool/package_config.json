@@ -135,7 +135,7 @@
     },
     {
       "name": "theme_extender_annotation",
-      "rootUri": "../../theme_extender_annotation",
+      "rootUri": "file:///Users/dominikmesek/.pub-cache/git/Theme-Extension-Generator-bb93ca28cab25458b6469fef59cc71404e196ac0/packages/theme_extender_annotation",
       "packageUri": "lib/",
       "languageVersion": "3.1"
     },
@@ -164,7 +164,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-11-17T14:23:23.902671Z",
+  "generated": "2023-11-17T14:45:49.539420Z",
   "generator": "pub",
   "generatorVersion": "3.1.5"
 }
