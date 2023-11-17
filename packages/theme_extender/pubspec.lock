@@ -180,11 +180,9 @@ packages:
   theme_extender_annotation:
     dependency: "direct main"
     description:
-      path: "packages/theme_extender_annotation"
-      ref: HEAD
-      resolved-ref: "83fd372a0dcc8896c61ccc6559b16f0acba60ff2"
-      url: "https://github.com/Q-Agency/Theme-Extension-Generator.git"
-    source: git
+      path: "../theme_extender_annotation"
+      relative: true
+    source: path
     version: "1.0.0"
   typed_data:
     dependency: transitive

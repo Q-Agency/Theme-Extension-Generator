@@ -1,7 +1,7 @@
 # Read about `build.yaml` at https://pub.dev/packages/build_config
 builders:
-  property_multiply:
-    import: "package:theme_extension_generator/builder.dart"
+  theme_extender:
+    import: "package:theme_extender/builder.dart"
     builder_factories: ["themeExtensionBuilder"]
     build_extensions: { ".dart": ["themeExtension.g.part"] }
     auto_apply: dependents
